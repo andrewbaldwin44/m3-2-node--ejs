@@ -1,0 +1,45 @@
+@import 'css-reset.css';
+@import 'typography.css';
+
+body {
+  overflow-y: hidden;
+  background-image: linear-gradient(130deg, #4285F4 0%,
+                                    white 90%);
+  height: 100vh;
+}
+
+header {
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #808080;
+  padding: 0 24px;
+}
+
+h1 {
+  margin: 40px 0;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 5;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+ul li {
+  transition: transform 0.4s;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+}

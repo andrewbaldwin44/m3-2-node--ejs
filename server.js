@@ -5,6 +5,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 // We need to "require" the files whose content we reference in this file.
+const homepage = (req, res) => res.render('pages/homepage');
 const exercisesP1 = require('./__workshop/exercisesP1');
 
 const q6 = (req, res) => res.render('pages/question6');
@@ -34,9 +35,7 @@ express()
   .get('/question10', q10)
 
   // this serves up the homepage
-  .get('/', (req, res) => {
-    res.send("This is the homepage... it's empty :(");
-  })
+  .get('/', homepage)
 
   // this is our catch all endpoint. If a user navigates to any endpoint that is not
   // defined above, they get to see our 404 page.
