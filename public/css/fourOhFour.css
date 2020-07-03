@@ -1,0 +1,12 @@
+body {
+  font-family: 'Notable', sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fhdqwalls.com%2Fwallpapers%2Fstar-wars-bb-droid.jpg&f=1&nofb=1');
+  background-size: cover;
+}
+
+h1 {
+  margin-left: 40px;
+}
