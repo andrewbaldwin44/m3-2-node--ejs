@@ -1,6 +1,7 @@
 'use strict';
 
 // import the needed node_modules.
+const handlers = require('./handlers.js');
 const express = require('express');
 const morgan = require('morgan');
 
@@ -14,6 +15,11 @@ const q7 = (req, res) => res.render('pages/question7');
 const q8 = (req, res) => res.render('pages/question8');
 const q9 = (req, res) => res.render('pages/question9');
 const q10 = (req, res) => res.render('pages/question10');
+
+const bacon = (req, res) => {
+  const bacon = handlers.getBaconImage();
+  res.render('pages/bacon', {bacon: bacon});
+};
 
 express()
   // This will give us will log more info to the console. see https://www.npmjs.com/package/morgan
@@ -34,6 +40,7 @@ express()
   .get('/question8', q8)
   .get('/question9', q9)
   .get('/question10', q10)
+  .get('/bacon', bacon)
 
   // this serves up the homepage
   .get('/', homepage)
