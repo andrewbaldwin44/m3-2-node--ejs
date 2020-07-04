@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./css/pagination.css">
+<div class="pagination">
+  <% if (typeof previous !== 'undefined') { %>
+    <a href=<%= `question${previous}` %>>Previous</a>
+    <% } %>
+
+    <% for (let i = 1; i <= 10; i++) { %>
+      <a href=<%= `question${i}` %>><%= i %></a>
+      <% } %>
+
+      <% if (typeof next !== 'undefined') { %>
+        <a href=<%= `question${next}` %>>Next</a>
+        <% } %>
+</div>
