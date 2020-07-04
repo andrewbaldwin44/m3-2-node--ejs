@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Andrew's Workshop</title>
-    <link rel="stylesheet" href="./css/homepage.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to Andrew's Workshop!</h1>
-    </header>
-    <ul>
-      <div>
-        <% for (let i = 1; i <= 5; i++) { %>
-          <li><a href=<%= `question${i}` %>><%= `Question ${i}` %></a></li>
-        <% } %>
-      </div>
-      <div>
-        <% for (let i = 6; i <= 10; i++) { %>
-          <li><a href=<%= `question${i}` %>><%= `Question ${i}` %></a></li>
-        <% } %>
-      </div>
-    </ul>
-  </body>
-</html>
+<%- include('../partials/head', {title: "Andrew's Workshop"}) %>
+<link rel="stylesheet" href="./css/homepage.css">
+<body>
+  <header>
+    <h1>Welcome to Andrew's Workshop!</h1>
+  </header>
+  <ul>
+    <div>
+      <% for (let i = 1; i <= 5; i++) { %>
+        <li><a href=<%= `question${i}` %>><%= `Question ${i}` %></a></li>
+      <% } %>
+    </div>
+    <div>
+      <% for (let i = 6; i <= 10; i++) { %>
+        <li><a href=<%= `question${i}` %>><%= `Question ${i}` %></a></li>
+      <% } %>
+    </div>
+  </ul>
+</body>
